@@ -225,7 +225,7 @@ class Button():
         draw = wasp.watch.drawable
         im = self._im
         bg = draw.darken(wasp.system.theme('ui'))
-        frame = wasp.system.theme('mid')
+        frame = bg
         txt = wasp.system.theme('bright')
 
         draw.fill(bg, im[0], im[1], im[2], im[3])
