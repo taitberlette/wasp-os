@@ -53,6 +53,11 @@ class ClockApp():
         """Periodic callback to update the display."""
         self._draw()
 
+    def format_number(self, string):
+        if len(string) == 1:
+            string = "0" + string
+        return string
+
     def _draw(self, redraw=False):
         """Draw or lazily update the display.
 
@@ -102,8 +107,8 @@ class ClockApp():
                 20, 105)
 
         # Draw Time
-        draw.set_font(fonts.sans64)
-        draw.string('{}:{}'.format(now[3], now[4]),
+        draw.set_font(fonts.sans48)
+        draw.string('{}:{}'.format(now[3], self.format_number(str(now[4]))),
                 20, 140)
 
         # Record the minute that is currently being displayed

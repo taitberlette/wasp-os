@@ -52,6 +52,7 @@ class SoftwareApp():
         db.append(('flashlight', factory('Torch')))
         db.append(('testapp', factory('Test')))
         db.append(('timer', factory('Timer')))
+        db.append(('hello', factory('Hello')))
 
         # Get the initial state for the checkboxes
         for _, checkbox in db:

@@ -12,6 +12,7 @@ manifest = (
     'apps/flashlight.py',
     # 'apps/gameoflife.py',
     'apps/haiku.py',
+    'apps/hello.py',
     'apps/heart.py',
     'apps/musicplayer.py',
     'apps/launcher.py',

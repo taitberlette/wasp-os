@@ -490,3 +490,31 @@ class ConfirmationView:
             return True
 
         return False
+
+class MetroTab:
+"""Metro Tab widget shows other pages like in Windows 8 Metro"""
+
+    def __init__(self, items = [], index = 0):
+        self.items = items
+        self.index = 0
+    
+    def draw(self):
+        items = self.items
+        index = self.index
+        x = 15
+        for i in range(len(items)):
+            
+            current_index = (i + index) % len(items)
+
+            draw.set_font(fonts.sans18)
+            draw.set_color(wasp.system.theme('mid'))
+
+            if i == 0:
+                draw.set_color(wasp.system.theme('bright'))
+                
+            draw.string(items[current_index], x, 15)
+
+            for char in items[current_index]:
+                data, height, letter_width = fonts.sans18.get_ch(char)
+                x += letter_width
+            x += 15
