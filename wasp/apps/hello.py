@@ -17,6 +17,7 @@ class HelloApp():
 
     def press(self, button, state):
         self.index += 1
+        self._draw()
 
     def _draw(self):
         draw = wasp.watch.drawable

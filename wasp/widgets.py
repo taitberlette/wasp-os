@@ -507,13 +507,13 @@ class MetroTab:
             current_index = (i + index) % len(items)
 
             draw = wasp.watch.drawable
-            draw.set_font(fonts.sans18)
+            draw.set_font(fonts.sans24)
             draw.set_color(wasp.system.theme('mid'))
             if i == 0:
                 draw.set_color(wasp.system.theme('bright'))
             draw.string(items[current_index], x, 15)
 
             for char in items[current_index]:
-                data, height, letter_width = fonts.sans18.get_ch(char)
+                data, height, letter_width = fonts.sans24.get_ch(char)
                 x += letter_width
-            x += 15
+            x += 20
