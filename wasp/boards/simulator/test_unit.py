@@ -47,7 +47,7 @@ def test_font_height(draw):
     assert 28 == draw.bounding_box('B')[1]
 
     draw.set_font(fonts.sans36)
-    assert 36 == draw.bounding_box('0')[1]
+    assert 37 == draw.bounding_box('0')[1]
 
 def test_font_width(draw):
     for f in (fonts.sans24, fonts.sans28, fonts.sans36):
