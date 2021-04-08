@@ -15,12 +15,6 @@ import wasp
 import icons
 import fonts.clock as digits
 
-DIGITS = (
-        digits.clock_0, digits.clock_1, digits.clock_2, digits.clock_3,
-        digits.clock_4, digits.clock_5, digits.clock_6, digits.clock_7,
-        digits.clock_8, digits.clock_9
-)
-
 MONTH = 'JanFebMarAprMayJunJulAugSepOctNovDec'
 
 class ClockApp():
@@ -76,7 +70,7 @@ class ClockApp():
 
             # Clear the display and draw that static parts of the watch face
             draw.fill()
-            draw.blit(digits.clock_colon, 2*48, 80, fg=mid)
+            # draw.blit(digits.clock_colon, 2*48, 80, fg=mid)
 
             # Redraw the status bar
             wasp.system.bar.draw()
@@ -95,13 +89,22 @@ class ClockApp():
         month = MONTH[month*3:(month+1)*3]
 
         # Draw the changeable parts of the watch face
-        draw.blit(DIGITS[now[4]  % 10], 4*48, 80, fg=hi)
-        draw.blit(DIGITS[now[4] // 10], 3*48, 80, fg=lo)
-        draw.blit(DIGITS[now[3]  % 10], 1*48, 80, fg=hi)
-        draw.blit(DIGITS[now[3] // 10], 0*48, 80, fg=lo)
+        # draw.blit(DIGITS[now[4]  % 10], 4*48, 80, fg=hi)
+        # draw.blit(DIGITS[now[4] // 10], 3*48, 80, fg=lo)
+        # draw.blit(DIGITS[now[3]  % 10], 1*48, 80, fg=hi)
+        # draw.blit(DIGITS[now[3] // 10], 0*48, 80, fg=lo)
+
         draw.set_color(hi)
+
+        # Draw Date
+        draw.set_font(fonts.sans24)
         draw.string('{} {} {}'.format(now[2], month, now[0]),
-                0, 180, width=240)
+                25, 140)
+
+        # Draw Time
+        draw.set_font(fonts.sans36)
+        draw.string('{}:{}'.format(now[4], now[3]),
+                25, 175)
 
         # Record the minute that is currently being displayed
         self._min = now[4]
