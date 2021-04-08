@@ -99,12 +99,12 @@ class ClockApp():
         # Draw Date
         draw.set_font(fonts.sans24)
         draw.string('{} {} {}'.format(now[2], month, now[0]),
-                25, 140)
+                20, 125)
 
         # Draw Time
         draw.set_font(fonts.sans36)
-        draw.string('{}:{}'.format(now[4], now[3]),
-                25, 175)
+        draw.string('{}:{}'.format(now[3], now[4]),
+                20, 160)
 
         # Record the minute that is currently being displayed
         self._min = now[4]
