@@ -492,7 +492,7 @@ class ConfirmationView:
         return False
 
 class MetroTab:
-"""Metro Tab widget shows other pages like in Windows 8 Metro"""
+    """Metro Tab widget shows other pages like in Windows 8 Metro"""
 
     def __init__(self, items = [], index = 0):
         self.items = items
