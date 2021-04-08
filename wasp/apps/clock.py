@@ -102,7 +102,7 @@ class ClockApp():
                 20, 125)
 
         # Draw Time
-        draw.set_font(fonts.sans36)
+        draw.set_font(fonts.sans48)
         draw.string('{}:{}'.format(now[3], now[4]),
                 20, 160)
 
