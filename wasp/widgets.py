@@ -494,7 +494,7 @@ class ConfirmationView:
 class MetroTab:
     """Metro Tab widget shows other pages like in Windows 8 Metro"""
 
-    def __init__(self, items = [], index = 0):
+    def __init__(self, items = ["Unknown"], index = 0):
         self.items = items
         self.index = 0
     
@@ -506,12 +506,11 @@ class MetroTab:
             
             current_index = (i + index) % len(items)
 
+            draw = wasp.watch.drawable
             draw.set_font(fonts.sans18)
             draw.set_color(wasp.system.theme('mid'))
-
             if i == 0:
                 draw.set_color(wasp.system.theme('bright'))
-                
             draw.string(items[current_index], x, 15)
 
             for char in items[current_index]:
