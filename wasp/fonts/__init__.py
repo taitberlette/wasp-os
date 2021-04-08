@@ -6,6 +6,7 @@ import fonts.sans24 as sans24
 import fonts.sans28 as sans28
 import fonts.sans36 as sans36
 import fonts.sans48 as sans48
+import fonts.sans64 as sans64
 
 def height(font):
     return font.height()

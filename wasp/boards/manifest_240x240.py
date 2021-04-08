@@ -33,6 +33,7 @@ manifest = (
     'fonts/sans28.py',
     'fonts/sans36.py',
     'fonts/sans48.py',
+    'fonts/sans64.py',
     'icons.py',
     'steplogger.py',
     'widgets.py',
